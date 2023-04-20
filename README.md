@@ -1,4 +1,4 @@
-![](https://github.com/shubhamn94/ERAS.github.io/blob/master/downtown-raleigh.jpg)
+<img src="https://github.com/sst-eras/ispass.github.io/blob/main/docs/assets/downtown-raleigh.jpg"  width="1000" height="600">
 
 ## April 23rd, Sunday, 1:00-5:00pm, Hotel Sheraton Raleigh, NC      
 
@@ -16,7 +16,7 @@ With a proliferation of custom IPs in the market, it is becoming increasingly ch
 ## ERAS Contributors 
 
 ### Principal Investigator ### 
-**Amro Awad**  
+ Amro Awad
 ### Collaborators (Sandia National Laboratories) ###
 Clayton Hughes   
 Gwendolyn Voskuilen   
