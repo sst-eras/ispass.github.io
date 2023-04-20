@@ -1,4 +1,4 @@
-<img src="https://github.com/sst-eras/ispass.github.io/blob/main/docs/assets/ispass23.jpg"  width="900" height="600">
+<img src="https://github.com/sst-eras/ispass.github.io/blob/main/docs/assets/ispass.jpg"  width="900" height="600">
 
 ## April 23rd, Sunday, 1:00-5:00pm, Hotel Sheraton Raleigh, NC      
 
