@@ -34,10 +34,55 @@
 Clay Hughes (Sandia National Laboratories), Gwen Voskuilen (Sandia National Laboratories), Amro Awad (NC State University), Shubham Nema (NC State University), Shiva Kaushik Chunduru (NC State University)<br />
 &nbsp;</section>
 
-<section>&nbsp;
-<h4>Schedule</h4>
+<section>
+<h4>ERAS Framework</h4>
+<figure>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<img alt="" align="middle" height="300" src="https://github.com/sst-eras/ispass.github.io/raw/main/docs/assets/eras_framework.png" width="600" /></figure>
+The Structural Simulation Toolkit (SST) architectural simulator is being actively used to drive design space exploration of various architectural models and optimizations for hardware and software used by Architects. <br> <br>
+Enabling the integration of accurate cycle-level models generated from low-level designs is challenging; <br> 
+<ol>
+<li> Low-level designs and their corresponding models operate as real hardware in so far
+as they have ports and pins that must be precisely assigned to the correct binary values on each cycle. Meanwhile, most architectural simulators operate at the event granularity – completely ignoring the signaling requirements needed for correct operation of real designs. </li>
+<li> Different interfaces (e.g., AXI or PCI) require specific handling and commands; specific sets of signal values are encoded as different commands and hence the responses and signaling of these port must adhere to the protocol specifications. </li>
+<li> Each design might require a set of initial configuration parameters, which must be set at simulation start-up time. All of these challenges need to be addressed systematically to enable a versatile solution that can enable seamless integration of real designs models in architectural simulators. </li>
+</ol>
+ERAS, enables seamless integration of low level designs into architectural simulators. Figure 1-1 depicts our vision for the future of architectural simulators and where ERAS framework fits in the architectural
+simulation workflow.  <br> <br>
+&nbsp;</section>
+<section>
+<h4><u>ERAS Contributors</u></h4>
 &nbsp;
+<h6>Principal Investigator</h6>
 
+<ul>
+	<li>Amro Awad</li>
+</ul>
+
+<h6>Collaborators (Sandia National Laboratories)</h6>
+
+<ul>
+	<li>Clayton Hughes</li>
+	<li>Gwendolyn Voskuilen</li>
+	<li>Scott Hemmert</li>
+	<li>Arun Rodrigues</li>
+	<li>Ben Feinberg</li>
+</ul>
+
+<h6>Developers</h6>
+
+<ul>
+	<li>Shiva Kaushik Chunduru</li>
+	<li>Shubham Nema</li>
+	<li>Muthya Ambati</li>
+	<li>Justin Kirschner</li>
+	<li>Rohin Razdan</li>
+	<li>Debpratim Adak</li>
+	<li>Hyokeun Lee</li>
+	<li>Amro Awad</li>
+</ul>
+</section>
+
+<section>
+<h4>Schedule</h4>
 <table class="table table-bordered table-striped">
 	<thead>
 		<tr>
@@ -69,53 +114,5 @@ Clay Hughes (Sandia National Laboratories), Gwen Voskuilen (Sandia National Labo
 		</tr>
 	</tbody>
 </table>
-</section>
-
-<section>
-<h4>ERAS Framework</h4>
-<figure>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<img alt="" align="middle" height="300" src="https://github.com/sst-eras/ispass.github.io/raw/main/docs/assets/eras_framework.png" width="600" /></figure>
-The Structural Simulation Toolkit (SST) architectural simulator is being actively used to drive design space exploration of various architectural models and optimizations for hardware and software used by Architects. <br> <br>
-Enabling the integration of accurate cycle-level models generated from low-level designs is challenging; <br> 
-<ol>
-<li> Low-level designs and their corresponding models operate as real hardware in so far
-as they have ports and pins that must be precisely assigned to the correct binary values on each cycle. Meanwhile, most architectural simulators operate at the event granularity – completely ignoring the signaling requirements needed for correct operation of real designs. </li>
-<li> Different interfaces (e.g., AXI or PCI) require specific handling and commands; specific sets of signal values are encoded as different commands and hence the responses and signaling of these port must adhere to the protocol specifications. </li>
-<li> Each design might require a set of initial configuration parameters, which must be set at simulation start-up time. All of these challenges need to be addressed systematically to enable a versatile solution that can enable seamless integration of real designs models in architectural simulators. </li>
-</ol>
-ERAS, enables seamless integration of low level designs into architectural simulators. Figure 1-1 depicts our vision for the future of architectural simulators and where ERAS framework fits in the architectural
-simulation workflow.  <br> <br>
-&nbsp;</section>
-<section>
-<h4><u>ERAS Contributors</u></h4>
-&nbsp;
-
-<h6>Principal Investigator</h6>
-
-<ul>
-	<li>Amro Awad</li>
-</ul>
-
-<h6>Collaborators (Sandia National Laboratories)</h6>
-
-<ul>
-	<li>Clayton Hughes</li>
-	<li>Gwendolyn Voskuilen</li>
-	<li>Scott Hemmert</li>
-	<li>Arun Rodrigues</li>
-	<li>Ben Feinberg</li>
-</ul>
-
-<h6>Developers</h6>
-
-<ul>
-	<li>Shiva Kaushik Chunduru</li>
-	<li>Shubham Nema</li>
-	<li>Muthya Ambati</li>
-	<li>Justin Kirschner</li>
-	<li>Rohin Razdan</li>
-	<li>Debpratim Adak</li>
-	<li>Hyokeun Lee</li>
-	<li>Amro Awad</li>
-</ul>
 </section>
 </main>
