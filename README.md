@@ -16,7 +16,7 @@ With a proliferation of custom IPs in the market, it is becoming increasingly ch
 ## ERAS Contributors 
 
 ### Principal Investigator ### 
-**Amro Awad**  
+ Amro Awad
 ### Collaborators (Sandia National Laboratories) ###
 Clayton Hughes   
 Gwendolyn Voskuilen   
