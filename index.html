@@ -2,9 +2,9 @@
 <title></title>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" rel="stylesheet" />
 <header>
-<figure>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<img alt="" align="middle" height="700" src="https://github.com/sst-eras/ispass.github.io/raw/main/docs/assets/ispass.jpg" width="1000" /></figure>
-<h2>SST-ERAS Tutorial</h2>
-<h4>April 23rd, Sunday - 1:00 - 5:00 pm, Sheraton Raleigh Hotel, Downtown, Raleigh, NC</h4>
+<figure>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<img alt="" align="middle" height="550" src="https://github.com/sst-eras/ispass.github.io/raw/main/docs/assets/ispass.jpg" width="850" /></figure>
+<h3>SST-ERAS Tutorial</h3>
+<h5>April 23rd, Sunday - 1:00 - 5:00 pm, Sheraton Raleigh Hotel, Downtown, Raleigh, NC</h5>
 <br />
 &nbsp;</header>
 
@@ -35,21 +35,24 @@ Clay Hughes (Sandia National Laboratories), Gwen Voskuilen (Sandia National Labo
 <section>
 <h4>ERAS Framework</h4>
 
-<figure>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<img alt="" align="middle" height="300" src="https://github.com/sst-eras/ispass.github.io/raw/main/docs/assets/sst_sim.jpg" width="500" /></figure>
-The Structural Simulation Toolkit (SST) was developed to explore innovations in highly concurrent systems where the ISA, microarchitecture, and memory interact with the programming model and communications system. The package provides two novel capabilities. The first is a fully modular design that enables extensive exploration of an individual system parameter without the need for intrusive changes to the simulator. The second is a parallel simulation environment based on MPI. This provides a high level of performance and the ability to look at large systems. The framework has been successfully used to model concepts ranging from processing in memory to conventional processors connected by conventional network interfaces and running MPI.
-
 <figure>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<img alt="" align="middle" height="300" src="https://github.com/sst-eras/ispass.github.io/raw/main/docs/assets/eras_framework.png" width="600" /></figure>
 The Structural Simulation Toolkit (SST) architectural simulator is being actively used to drive design space exploration of various architectural models and optimizations for hardware and software used by Architects. <br> <br>
-Enabling the integration of accurate cycle-level models generated from low-level designs is challenging; <br> 
+The ability to augment the designs and architectural models explored in SST with low-level highly-accurate models, possibly with publicly available third-party IPs, can enable: 
 <ol>
-<li> Low-level designs and their corresponding models operate as real hardware in so far
-as they have ports and pins that must be precisely assigned to the correct binary values on each cycle. Meanwhile, most architectural simulators operate at the event granularity – completely ignoring the signaling requirements needed for correct operation of real designs. </li>
-<li> Different interfaces (e.g., AXI or PCI) require specific handling and commands; specific sets of signal values are encoded as different commands and hence the responses and signaling of these port must adhere to the protocol specifications. </li>
-<li> Each design might require a set of initial configuration parameters, which must be set at simulation start-up time. All of these challenges need to be addressed systematically to enable a versatile solution that can enable seamless integration of real designs models in architectural simulators. </li>
+	<li> fast evaluation of the performance impact for alternative IPs in designs of interest; 
+	<li> enable system-level studies for using realistic IPs even before the technology or products are available; 
+	<li> save significant efforts for modeling architectural components,typically integrated as-is, by just leveraging low-level models already available; 
+	<li> facilitate more realistic design space exploration driven by real-world constraints of the used IPs (e.g., port width, interface protocol, interoperability, etc.); 
+	<li> accurate performance evaluations of sub-systems of interest and understanding possible limitations of alternative IPs/implementations rather than using abstracted medium-fidelity designs. 
 </ol>
-ERAS, enables seamless integration of low level designs into architectural simulators. Figure 1-1 depicts our vision for the future of architectural simulators and where ERAS framework fits in the architectural
+
+Hence, we propose <b>ERAS</b> that systematically addresses these challenges and enables a versatile solution for seamless integration of low level designs into architectural simulators. Above figure depicts our vision for the future of architectural simulators and where ERAS framework fits in the architectural
 simulation workflow.  <br> <br>
+
+<figure>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<img alt="" align="middle" height="150" src="https://github.com/sst-eras/ispass.github.io/raw/main/docs/assets/systematic_flow.png" width="450" /></figure>
+The framework leverages the <em> Essential Signal Simulation by Netlist Transforms(ESSENT) [1]</em> tools to generate a C-model from a model described in FIRRTL, which is an Intermediate Representation (IR) for any Hardware Description Language (HDL). The hardware description can be written in Verilog or Chisel[2], which is a popular Hardware Construction language written in Scala [3], and can be converted to FIRRTL using the Chisel compiler. Similarly, hardware descriptions written in Verilog can be lowered to FIRRTL using Yosys [4]. The generated C-model is fed to the parser, the core of the ERAS, that generates architectural components integrable with SST.
 &nbsp;</section>
+<br>
 <section>
 <h4><u>ERAS Contributors</u></h4>
 &nbsp;
@@ -137,3 +140,12 @@ simulation workflow.  <br> <br>
 </section>
 <br>
 </main>
+
+<section>
+<h4>References</h4>
+<ol>
+	<li> &nbsp; Beamer, Scott, and USDOE. Essential Signal Simulation Enabled by Netlist Transforms (ESSENT) v1.0. Computer software. https://www.osti.gov//servlets/purl/1572345. USDOE. 3 Jul. 2019. Web. doi:10.11578/dc.20191029.3 </li>
+	<li> &nbsp; Jonathan Bachrach, Huy Vo, Brian Richards, Yunsup Lee, Andrew Waterman, Rimas Avižienis, John Wawrzynek, and Krste Asanović. 2012. Chisel: constructing hardware in a Scala embedded language. In Proceedings of the 49th Annual Design Automation Conference (DAC '12). Association for Computing Machinery, New York, NY, USA, 1216–1225. https://doi.org/10.1145/2228360.2228584 </li>
+	<li> &nbsp; Odersky, Martin, Philippe Altherr, Vincent Cremet, Burak Emir, Stphane Micheloud, Nikolay Mihaylov, Michel Schinz, Erik Stenman, and Matthias Zenger. "The Scala language specification." (2004). </li>
+	<li> &nbsp; Wolf, Clifford, Johann Glaser and Johannes Kepler. “Yosys-A Free Verilog Synthesis Suite.” (2013). </li>
+</ol>
